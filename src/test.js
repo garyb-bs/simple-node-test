@@ -44,7 +44,7 @@ const capabilities1 = {
         "os": "Windows",
         "osVersion": "10",
         "browserVersion": "latest",
-        "buildName" : "browserstack-build-1",
+        "buildName" : process.env.BROWSERSTACK_BUILD_NAME,
         "sessionName" : "Parallel test 1",
     },
     "browserName": "Firefox"
@@ -54,7 +54,7 @@ const capabilities1 = {
         "os": "Windows",
         "osVersion": "11",
         "browserVersion": "latest",
-        "buildName" : "browserstack-build-1",
+        "buildName" : process.env.BROWSERSTACK_BUILD_NAME,
         "sessionName" : "Parallel test 2",
     },
     "browserName": "Edge"
@@ -64,7 +64,7 @@ const capabilities3 = {
         "os": "Windows",
         "osVersion": "11",
         "browserVersion": "latest",
-        "buildName" : "browserstack-build-1",
+        "buildName" : process.env.BROWSERSTACK_BUILD_NAME,
         "sessionName" : "Parallel test 3",
     },
     "browserName": "Chrome"
