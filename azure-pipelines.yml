@@ -15,7 +15,13 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BS_Demo_Creds'
 - script: |
     npm install
     npm run test
   displayName: 'npm install and build'
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
