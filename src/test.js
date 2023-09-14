@@ -1,7 +1,7 @@
 const webdriver = require('selenium-webdriver');
 async function runTestWithCaps (capabilities) {
   let driver = new webdriver.Builder()
-    .usingServer('http://garyb_bE4JkU:pdssmsj9TXxUef71xdej@hub-cloud.browserstack.com/wd/hub')
+    .usingServer('http://' + process.env.BROWSERSTACK_USERNAME + ':' + process.env.BROWSERSTACK_ACCESS_KEY + '@hub-cloud.browserstack.com/wd/hub')
     .withCapabilities({
       ...capabilities,
       ...capabilities['browser'] && { browserName: capabilities['browser']}  // Because NodeJS language binding requires browserName to be defined
